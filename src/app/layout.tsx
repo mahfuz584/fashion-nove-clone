@@ -1,18 +1,13 @@
 import Header from "@/components/ui/shared/header";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/lib/providers/theme";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { IBM_Plex_Sans, Inter, Playfair_Display } from "next/font/google";
+import { IBM_Plex_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
 });
@@ -44,8 +39,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          {children}
+          <TooltipProvider>
+            <Header />
+            {children}
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>
