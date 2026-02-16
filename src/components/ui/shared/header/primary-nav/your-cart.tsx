@@ -5,10 +5,14 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { ShoppingCart } from "lucide-react";
+import { ActiveTooltipProps } from "./types";
 
-const YourCart = () => {
+const YourCart = ({ active, setActive }: ActiveTooltipProps) => {
   return (
-    <Tooltip>
+    <Tooltip
+      open={active === "cart"}
+      onOpenChange={(open) => setActive(open ? "cart" : null)}
+    >
       <TooltipTrigger asChild>
         <Button
           variant="ghost"
