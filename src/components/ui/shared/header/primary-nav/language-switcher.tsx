@@ -7,11 +7,16 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { ActiveTooltipProps } from "./types";
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = ({
+  setActive,
+}: {
+  setActive: ActiveTooltipProps["setActive"];
+}) => {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+      <DropdownMenuTrigger asChild onMouseEnter={() => setActive(null)}>
         <Button
           size="icon"
           variant="ghost"

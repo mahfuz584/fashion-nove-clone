@@ -1,10 +1,11 @@
-import HeaderMeta from "./header-meta";
+import PrimaryNav from "./primary-nav";
+import SecondaryNav from "./secondary-nav";
 
 const Header = () => {
   return (
     <>
-      <HeaderMeta />
-      {/* <HeaderNav /> */}
+      <PrimaryNav />
+      <SecondaryNav />
     </>
   );
 };

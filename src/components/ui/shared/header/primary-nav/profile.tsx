@@ -7,10 +7,14 @@ import {
 } from "@/components/ui/tooltip";
 import { CircleUserIcon } from "lucide-react";
 import { profile_categories } from "./constants";
+import { ActiveTooltipProps } from "./types";
 
-const Profile = () => {
+const Profile = ({ active, setActive }: ActiveTooltipProps) => {
   return (
-    <Tooltip>
+    <Tooltip
+      open={active === "profile"}
+      onOpenChange={(open) => setActive(open ? "profile" : null)}
+    >
       <TooltipTrigger asChild>
         <Button
           variant="ghost"

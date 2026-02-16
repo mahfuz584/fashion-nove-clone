@@ -42,9 +42,10 @@ function TooltipContent({
         data-slot="tooltip-content"
         sideOffset={sideOffset}
         className={cn(
-          "bg-popover-background text-popover-foreground z-50 w-fit rounded-lg px-3 py-1.5 text-xs text-balance shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]",
+          "bg-popover-background text-popover-foreground z-50 w-fit rounded-lg px-3 py-1.5 text-xs text-balance shadow-1",
           "animate-in fade-in-0 slide-in-from-bottom-4 duration-300",
           "data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:slide-out-to-bottom-4 data-[state=closed]:duration-300",
+          "data-[state=closed]:pointer-events-none",
           "origin-center",
           className,
         )}
