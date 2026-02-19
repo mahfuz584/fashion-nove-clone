@@ -2,17 +2,20 @@
 
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
+import Image from "next/image";
+import Link from "next/link";
 import { useRef, useState } from "react";
 import { secondary_nav } from "./constants";
 
 const SecondaryNav = () => {
   const panelRef = useRef<HTMLDivElement | null>(null);
   const backdropRef = useRef<HTMLDivElement | null>(null);
-  const [activeId, setActiveId] = useState<string | null>(null);
+  const [activeId, setActiveId] = useState<string | null>(secondary_nav[0].id);
 
   const isOpen = Boolean(activeId);
-
-  const active_menu_items = secondary_nav.find((item) => item.id === activeId);
+  const active_menu_items = secondary_nav.find(
+    (item) => item.id === activeId,
+  )?.content;
 
   console.log(active_menu_items);
 
@@ -71,11 +74,11 @@ const SecondaryNav = () => {
     <>
       <div
         ref={backdropRef}
-        className="fixed left-0 right-0 bottom-0 top-31.5 bg-black/20 backdrop-blur-[2px] z-40 opacity-0 pointer-events-none"
+        className="fixed left-0 right-0 bottom-0 top-31.5 bg-black/15 backdrop-blur-[2px] z-40 opacity-0 pointer-events-none"
       />
       <div
-        className="relative z-50 w-full max-w-4xl mx-auto rounded-lg mb-2 mt-4"
-        onMouseLeave={() => setActiveId(null)}
+        className="relative z-50 w-full max-w-6xl mx-auto rounded-lg mb-2 mt-4"
+        // onMouseLeave={() => setActiveId(null)}
       >
         <div className="flex items-center justify-center gap-2 px-3 py-2 rounded-lg">
           {secondary_nav.map((item) => (
@@ -91,11 +94,49 @@ const SecondaryNav = () => {
           ))}
         </div>
         <div className="absolute left-0 right-0 top-full h-2" />
+        <div className="absolute -top-1 size-3 bg-background  -translate-x-1/2 transition-[left] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
         <div
           ref={panelRef}
-          className="absolute left-0 top-[calc(100%+8px)] w-full rounded-lg bg-background shadow-xl overflow-hidden"
+          className="absolute left-1/2 -translate-x-1/2 top-[calc(100%+8px)] w-fit rounded-md bg-background shadow-xl overflow-hidden"
         >
-          {activeId && <div className="p-8">asdsa</div>}
+          <div className="flex justify-between gap-12 h-full">
+            <div className="flex ">
+              {active_menu_items?.columns.map((column) => (
+                <div
+                  key={column.id}
+                  className="min-w-[180px] border-r h-full p-8"
+                >
+                  <p className="mb-4 font-semibold text-sm uppercase whitespace-nowrap">
+                    {column.title}
+                  </p>
+                  <div className="flex flex-col gap-2">
+                    {column.links.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {active_menu_items?.promo && (
+              <div className="w-full">
+                <Image
+                  src={active_menu_items.promo.image}
+                  alt={active_menu_items.promo.label}
+                  width={500}
+                  height={100}
+                  priority
+                  className="object-center object-cover rounded-md w-full h-full"
+                />
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </>

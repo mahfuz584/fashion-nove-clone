@@ -6,6 +6,7 @@ export const secondary_nav = [
       columns: [
         {
           id: "new-in-shop-all",
+          title: "SHOP ALL NEW IN",
           links: [
             { label: "New Arrivals", href: "/men/new-in/arrivals" },
             { label: "Best Sellers", href: "/men/new-in/best-sellers" },
@@ -28,7 +29,8 @@ export const secondary_nav = [
       ],
       promo: {
         id: "new-in-promo",
-        image: "/images/men-new-in.jpg",
+        image:
+          "https://images.unsplash.com/photo-1770215962687-93b6b860add7?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         href: "/men/new-in",
         label: "Shop New In",
       },
@@ -61,7 +63,8 @@ export const secondary_nav = [
       ],
       promo: {
         id: "clothing-promo",
-        image: "/images/men-clothing.jpg",
+        image:
+          "https://images.unsplash.com/photo-1771308457227-efd671c6c347?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         href: "/men/clothing",
         label: "Shop All Clothing",
       },
@@ -93,7 +96,8 @@ export const secondary_nav = [
       ],
       promo: {
         id: "deals-promo",
-        image: "/images/men-deals.jpg",
+        image:
+          "https://images.unsplash.com/photo-1705657309655-c18966db966d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         href: "/men/deals",
         label: "Shop Deals",
       },
