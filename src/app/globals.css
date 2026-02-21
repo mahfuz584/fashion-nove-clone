@@ -128,13 +128,16 @@
     @apply font-ibm-plex-sans text-xs leading-normal tracking-[-0.36px] md:text-lg lg:tracking-[-0.54px];
   }
   .body-3 {
-    @apply text-xs leading-1.5 tracking-[-0.36px] md:text-lg lg:tracking-[-0.54px] font-ibm-plex-sans;
+    @apply text-base leading-1.5 tracking-[-0.36px] md:text-lg lg:tracking-[-0.54px] font-ibm-plex-sans;
   }
   .body-4 {
-    @apply text-xs leading-normal tracking-[-0.36px] md:text-base lg:tracking-[0.54px] font-ibm-plex-sans;
+    @apply text-sm leading-normal tracking-[-0.36px] md:text-base lg:tracking-[0.54px] font-ibm-plex-sans;
   }
   .body-5 {
     @apply text-xs leading-normal tracking-[-0.36px] md:text-[13px] lg:tracking-[0.54px] font-ibm-plex-sans;
+  }
+  .body-6 {
+    @apply leading-normal tracking-[-0.36px] text-sm lg:tracking-[0.54px] font-ibm-plex-sans;
   }
   .container {
     @apply mx-auto max-w-460 px-4 sm:px-6 lg:px-8;
