@@ -103,4 +103,49 @@ export const secondary_nav = [
       },
     },
   },
+  {
+    id: "accessories",
+    label: "ACCESSORIES",
+    content: {
+      columns: [
+        {
+          id: "accessories-shop-all",
+          title: "SHOP ALL ACCESSORIES",
+          links: [
+            { label: "Shop All Accessories", href: "/men/accessories" },
+            { label: "New In Accessories", href: "/men/accessories/new" },
+            { label: "Best Sellers", href: "/men/accessories/best-sellers" },
+            { label: "Sale Accessories", href: "/men/accessories/sale" },
+          ],
+        },
+        {
+          id: "accessories-category",
+          title: "SHOP BY CATEGORY",
+          links: [
+            { label: "Caps & Hats", href: "/men/accessories/hats" },
+            { label: "Bags", href: "/men/accessories/bags" },
+            { label: "Sunglasses", href: "/men/accessories/sunglasses" },
+            { label: "Belts", href: "/men/accessories/belts" },
+          ],
+        },
+        {
+          id: "accessories-featured",
+          title: "FEATURED",
+          links: [
+            { label: "Trending Now", href: "/men/accessories/trending" },
+            { label: "Summer Essentials", href: "/men/accessories/summer" },
+            { label: "Limited Edition", href: "/men/accessories/limited" },
+            { label: "Gift Ideas", href: "/men/accessories/gifts" },
+          ],
+        },
+      ],
+      promo: {
+        id: "accessories-promo",
+        image:
+          "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1470&auto=format&fit=crop",
+        href: "/men/accessories",
+        label: "Shop Accessories",
+      },
+    },
+  },
 ];
