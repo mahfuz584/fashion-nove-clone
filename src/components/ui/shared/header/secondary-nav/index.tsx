@@ -58,7 +58,7 @@ const SecondaryNav = () => {
           opacity: 0,
           y: -12,
           duration: 0.3,
-          delay: 0.12,
+          // delay: 0.12,
           ease: "power2.in",
         }).to(
           backdrop,

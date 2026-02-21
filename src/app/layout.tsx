@@ -1,6 +1,7 @@
 import Header from "@/components/ui/shared/header";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { ThemeProvider } from "@/lib/providers/theme";
+import { LenisProvider } from "@/lib/providers/lenis-provider";
+import { ThemeProvider } from "@/lib/providers/theme-provider";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { IBM_Plex_Sans, Playfair_Display } from "next/font/google";
@@ -39,9 +40,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <TooltipProvider delayDuration={0} skipDelayDuration={0}>
+          <TooltipProvider>
             <Header />
-            {children}
+            <LenisProvider>{children}</LenisProvider>
           </TooltipProvider>
         </ThemeProvider>
       </body>
