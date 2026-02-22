@@ -58,7 +58,7 @@ const SecondaryNav = () => {
           opacity: 0,
           y: -12,
           duration: 0.3,
-          // delay: 0.12,
+          delay: 0.12,
           ease: "power2.in",
         }).to(
           backdrop,
@@ -79,14 +79,14 @@ const SecondaryNav = () => {
     <>
       <div
         ref={backdropRef}
-        className="fixed left-0 right-0 bottom-0 top-31.5 bg-black/15 backdrop-blur-[2px] opacity-0 pointer-events-none"
+        className="fixed left-0 right-0 bottom-0 top-29.25 bg-black/15 backdrop-blur-[2px] opacity-0 pointer-events-none"
       />
 
       <div
         onMouseLeave={() => setActiveId(null)}
-        className="relative z-50 w-full max-w-6xl mx-auto rounded-lg mb-2 mt-4"
+        className="relative z-50 w-full max-w-6xl mx-auto rounded-lg"
       >
-        <div className="flex items-center justify-center gap-2 px-3 py-2 rounded-lg">
+        <div className="flex items-center justify-center">
           {secondary_nav.map((item) => (
             <p
               key={item.id}
@@ -95,20 +95,18 @@ const SecondaryNav = () => {
                 setVisibleId(item.id);
               }}
               className={cn(
-                "cursor-pointer body-5 font-medium border py-1.5 px-3 rounded-lg transition-colors duration-200 bg-muted",
-                activeId === item.id && "hover:bg-muted",
+                "cursor-pointer body-5 font-medium  py-1.5 px-3 duration-200",
+                activeId === item.id && "underline",
               )}
             >
               {item.label}
             </p>
           ))}
         </div>
-
         <div className="absolute left-0 right-0 top-full h-2" />
-
         <div
           ref={panelRef}
-          className="absolute left-1/2 -translate-x-1/2 top-[calc(100%+8px)] w-fit rounded-md bg-background shadow-xl overflow-hidden h-0 opacity-0 -translate-y-3"
+          className="absolute left-1/2 -translate-x-1/2 top-10 w-fit rounded-md bg-background shadow-xl overflow-hidden h-0 opacity-0 -translate-y-3"
         >
           <div className="flex justify-between h-full">
             <div className="flex">

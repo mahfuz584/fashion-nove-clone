@@ -1,4 +1,4 @@
-import Header from "@/components/ui/shared/header";
+import Header from "@/components/ui/shared/header/header";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LenisProvider } from "@/lib/providers/lenis-provider";
 import { ThemeProvider } from "@/lib/providers/theme-provider";
