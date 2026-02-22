@@ -1,9 +1,9 @@
-import Hero from "./components/hero";
+import VideoHero from "./components/hero";
 
 const HomePage = () => {
   return (
     <div>
-      <Hero />
+      <VideoHero />
     </div>
   );
 };
