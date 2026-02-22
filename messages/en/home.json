@@ -1,0 +1,15 @@
+{
+  "title": "Welcome to Our Platform",
+  "subtitle": "Build faster with modern tools.",
+  "cta": "Get Started",
+  "sections": {
+    "about": {
+      "title": "Why Choose Us",
+      "description": "Simple, scalable and built for performance."
+    },
+    "contact": {
+      "title": "Need Help?",
+      "description": "Our team is here to support you anytime."
+    }
+  }
+}
