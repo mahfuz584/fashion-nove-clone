@@ -1,5 +1,11 @@
+import VideoHero from "../components/hero";
+
 const WomenHomePage = () => {
-  return <div>WomenHomePage</div>;
+  return (
+    <>
+      <VideoHero />
+    </>
+  );
 };
 
 export default WomenHomePage;

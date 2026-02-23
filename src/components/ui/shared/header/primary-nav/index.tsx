@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { shop_categories } from "./constants";
 import HeaderUtilities from "./header-utilities";
@@ -14,11 +15,17 @@ const PrimaryNav = () => {
         priority
         className="w-auto h-auto"
       />
-      <div className="flex items-center gap-3 flex-1 ml-5">
-        {shop_categories.map(({ id, label }) => (
-          <p key={`${label}-${id}`} className="body-5 font-bold">
+      <div className="flex items-center flex-1 ml-5 gap-3">
+        {shop_categories.map(({ id, label, href }) => (
+          <Button
+            key={`${label}-${id}`}
+            href={href}
+            variant="link"
+            component="link"
+            className="w-fit text-xs font-bold py-0 px-0.5 h-fit"
+          >
             {label}
-          </p>
+          </Button>
         ))}
       </div>
       <SearchProducts />

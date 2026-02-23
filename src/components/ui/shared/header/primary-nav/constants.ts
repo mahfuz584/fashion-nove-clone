@@ -4,18 +4,22 @@ export const shop_categories = [
   {
     id: "women",
     label: "WOMEN",
+    href: "/women",
   },
   {
     id: "men",
     label: "MEN",
+    href: "/men",
   },
   {
     id: "kids",
     label: "KIDS",
+    href: "/kids",
   },
   {
     id: "beauty",
     label: "BEAUTY",
+    href: "/beauty",
   },
 ];
 
