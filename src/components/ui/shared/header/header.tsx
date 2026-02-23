@@ -3,7 +3,7 @@ import SecondaryNav from "./secondary-nav";
 
 const Header = () => {
   return (
-    <div>
+    <div className="border-b border-black/10">
       <PrimaryNav />
       <SecondaryNav />
     </div>

@@ -79,14 +79,14 @@ const SecondaryNav = () => {
     <>
       <div
         ref={backdropRef}
-        className="fixed left-0 right-0 bottom-0 top-29.25 bg-black/15 backdrop-blur-[2px] opacity-0 pointer-events-none"
+        className="fixed left-0 right-0 bottom-0 top-23 bg-black/15 backdrop-blur-[2px] opacity-0 pointer-events-none"
       />
 
       <div
         onMouseLeave={() => setActiveId(null)}
         className="relative z-50 w-full max-w-6xl mx-auto rounded-lg"
       >
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center gap-4">
           {secondary_nav.map((item) => (
             <p
               key={item.id}
@@ -95,8 +95,8 @@ const SecondaryNav = () => {
                 setVisibleId(item.id);
               }}
               className={cn(
-                "cursor-pointer body-5 font-medium  py-1.5 px-3 duration-200",
-                activeId === item.id && "underline",
+                "cursor-pointer body-5 font-medium  px-0.5 duration-200 w-fit text-xs h-fit border-b-3 border-transparent hover:border-primary hover:text-primary mb-2",
+                activeId === item.id && " border-primary",
               )}
             >
               {item.label}
