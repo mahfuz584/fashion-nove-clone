@@ -7,13 +7,13 @@ import { ThemeProvider } from "@/lib/providers/theme-provider";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { IBM_Plex_Sans, Playfair_Display } from "next/font/google";
+import { IBM_Plex_Sans, Montserrat } from "next/font/google";
 import { notFound } from "next/navigation";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const ibm_plex_sans = IBM_Plex_Sans({
@@ -47,7 +47,11 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={cn("antialiased", ibm_plex_sans.variable, playfair.variable)}
+        className={cn(
+          "antialiased",
+          ibm_plex_sans.variable,
+          montserrat.variable,
+        )}
       >
         <ThemeProvider
           attribute="class"
