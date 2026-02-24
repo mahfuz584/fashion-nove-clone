@@ -11,16 +11,19 @@ export const LenisProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const lenis = new Lenis({
       smoothWheel: true,
-      lerp: 0.07,
+      lerp: 0.12,
+      wheelMultiplier: 0.5,
+      touchMultiplier: 1,
     });
 
     lenis.on("scroll", ScrollTrigger.update);
 
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
+    const raf = (time: number) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
 
-    gsap.ticker.lagSmoothing(0);
+    requestAnimationFrame(raf);
 
     return () => {
       lenis.destroy();

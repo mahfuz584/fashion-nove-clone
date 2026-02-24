@@ -144,6 +144,9 @@
   .container {
     @apply mx-auto max-w-460 px-4 sm:px-6 lg:px-8;
   }
+  .section-spacing {
+    @apply pb-15 md:pb-20 lg:pb-25;
+  }
 }
 
 @layer base {
