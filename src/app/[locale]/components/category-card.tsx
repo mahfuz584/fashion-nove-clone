@@ -1,20 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { CategoryTypeProps } from "./types";
+import { CategoryCardProps } from "./types";
 
-const CategoryCard = ({ category, classes }: CategoryTypeProps) => {
+const CategoryCard = ({ cardItem, classes }: CategoryCardProps) => {
   return (
     <Button
       variant="link"
       className={cn(
-        "bg-card rounded-sm overflow-hidden h-auto flex-col hover:border-none border-0 p-0",
+        "bg-card h-auto flex-col hover:border-none border-0 p-0 gap-0",
         classes?.root,
       )}
     >
       <Image
-        src={category.img}
-        alt={category.label}
+        src={cardItem.img}
+        alt={cardItem.label}
         width={500}
         height={500}
         className={cn(
@@ -22,8 +22,8 @@ const CategoryCard = ({ category, classes }: CategoryTypeProps) => {
           classes?.img,
         )}
       />
-      <p className="body-1 py-4 font-semibold uppercase text-center">
-        {category.label}
+      <p className="card-title uppercase text-center text-card-foreground py-1.5">
+        {cardItem.label}
       </p>
     </Button>
   );

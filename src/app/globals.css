@@ -31,6 +31,7 @@
   --color-muted: var(--muted);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-secondary: var(--secondary);
+  --color-tertiary-foreground: var(--tertiary-foreground);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
   --color-popover-foreground: var(--popover-foreground);
@@ -51,6 +52,7 @@
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
+  --tertiary-foreground: oklch(0.4662 0.1642 4.6);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(93.705% 0.00011 271.152);
@@ -90,6 +92,7 @@
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
+  --tertiary-foreground: oklch(0.4662 0.1642 4.6);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
   --accent: oklch(0.269 0 0);
@@ -121,7 +124,7 @@
     @apply text-4xl leading-9.5 font-semibold tracking-[-1.8px] lg:text-5xl lg:leading-15 xl:text-6xl xl:tracking-[-5.6px] 2xl:text-[56px] 2xl:leading-18.75 font-montserrat;
   }
   .header-subtitle {
-    @apply text-2xl leading-7.5 font-semibold tracking-[-1.68px] md:text-[28px] xl:text-[34px] xl:leading-[45.6px] xl:tracking-[-2.8px] 2xl:text-[40px] font-montserrat;
+    @apply text-2xl leading-7.5 font-bold tracking-[-1.68px] md:text-[28px] xl:text-[32px] xl:leading-[45.6px] xl:tracking-tight 2xl:text-4xl font-montserrat;
   }
   .body-1 {
     @apply font-ibm-plex-sans text-lg leading-normal tracking-normal md:text-xl lg:tracking-[-0.72px] xl:text-2xl;
@@ -141,11 +144,14 @@
   .body-6 {
     @apply leading-normal tracking-[-0.36px] text-sm lg:tracking-[0.54px] font-ibm-plex-sans;
   }
+  .card-title {
+    @apply leading-7.5 font-semibold tracking-[-0.72px] text-base md:leading-9.5 lg:tracking-normal font-ibm-plex-sans;
+  }
   .container {
-    @apply mx-auto max-w-460 px-4 sm:px-6 lg:px-8;
+    @apply mx-auto max-w-450 px-4 sm:px-6 lg:px-8;
   }
   .section-spacing {
-    @apply pb-15 md:pb-20 lg:pb-25;
+    @apply pb-15 md:pb-18 lg:pb-23;
   }
 }
 
