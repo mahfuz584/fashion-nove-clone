@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { CategoryCardProps } from "./types";
+import { SellerCardProps } from "./types";
 
-const CategoryCard = ({ cardItem, classes }: CategoryCardProps) => {
+const BestSellerCard = ({ cardItem, classes }: SellerCardProps) => {
   return (
     <Button
       variant="link"
       className={cn(
-        "bg-card h-auto flex-col hover:border-none border-0 p-0 gap-0",
+        "h-auto flex-col hover:border-none border-0 p-0 gap-0 items-start truncate",
         classes?.root,
       )}
     >
@@ -22,11 +22,11 @@ const CategoryCard = ({ cardItem, classes }: CategoryCardProps) => {
           classes?.img,
         )}
       />
-      <p className="card-title uppercase text-center text-card-foreground py-1.5">
+      <p className="text-sm font-semibold text-center py-2 pr-3 max-w-full truncate">
         {cardItem.label}
       </p>
     </Button>
   );
 };
 
-export default CategoryCard;
+export default BestSellerCard;
