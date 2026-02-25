@@ -16,11 +16,15 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "www.freepik.com",
+        hostname: "marena.com",
       },
       {
         protocol: "https",
-        hostname: "www.gettyimages.com",
+        hostname: "greatnesswins.com",
+      },
+      {
+        protocol: "https",
+        hostname: "plus.unsplash.com",
       },
     ],
   },

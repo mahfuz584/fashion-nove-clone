@@ -3,10 +3,13 @@ import { mensGymCategories } from "./constants";
 
 const GymItemCategoroes = () => {
   return (
-    <div className="grid grid-cols-4 gap-5 container section-spacing">
-      {mensGymCategories.map((category) => (
-        <CategoryCard key={category.id} category={category} />
-      ))}
+    <div className="section-spacing container">
+      <p className="header-subtitle pb-6 ">SHOP BY CATEGORY</p>
+      <div className="grid grid-cols-5 gap-5">
+        {mensGymCategories.map((category) => (
+          <CategoryCard key={category.id} category={category} />
+        ))}
+      </div>
     </div>
   );
 };

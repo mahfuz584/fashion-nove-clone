@@ -8,7 +8,7 @@ const CategoryCard = ({ category, classes }: CategoryTypeProps) => {
     <Button
       variant="link"
       className={cn(
-        "bg-card rounded-sm overflow-hidden h-auto flex-col hover:border-none border-0 p-0",
+        "bg-card  overflow-hidden h-auto flex-col hover:border-none border-0 p-0 gap-0",
         classes?.root,
       )}
     >
@@ -22,7 +22,7 @@ const CategoryCard = ({ category, classes }: CategoryTypeProps) => {
           classes?.img,
         )}
       />
-      <p className="body-1 py-4 font-semibold uppercase text-center">
+      <p className="card-title uppercase text-center text-card-foreground py-1.5">
         {category.label}
       </p>
     </Button>
