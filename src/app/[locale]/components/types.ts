@@ -19,6 +19,6 @@ export type CategoryCardProps = {
 };
 
 export type SellerCardProps = {
-  cardItem: CardItem & { price: string; rating: string; reviews: string };
+  cardItem: CardItem & { price: string; rating: number; reviews: string };
   classes?: ClassType;
 };

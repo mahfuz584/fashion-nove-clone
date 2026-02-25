@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import ClientRacting from "./client-rating";
 import { SellerCardProps } from "./types";
 
 const BestSellerCard = ({ cardItem, classes }: SellerCardProps) => {
@@ -22,9 +23,16 @@ const BestSellerCard = ({ cardItem, classes }: SellerCardProps) => {
           classes?.img,
         )}
       />
-      <p className="text-sm font-semibold text-center py-2 pr-3 max-w-full truncate">
+      <p className="text-xs font-medium pt-3 pb-1 pr-3 max-w-full truncate">
         {cardItem.label}
       </p>
+      <div className="flex items-center justify-between w-full">
+        <p className="flex items-center gap-1.5 body-3 font-semibold text-tertiary-foreground">
+          <span>Tk</span>
+          {cardItem.price}
+        </p>
+        <ClientRacting rating={cardItem.rating} />
+      </div>
     </Button>
   );
 };
