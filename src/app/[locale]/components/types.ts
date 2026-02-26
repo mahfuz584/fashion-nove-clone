@@ -7,18 +7,21 @@ type CardItem = {
   id: string;
   label: string;
   img: string;
+  price: string;
+  rating: number;
+  reviews: string;
 };
 
 export type CategoryCardProps = {
-  cardItem: {
-    id: string;
-    label: string;
-    img: string;
-  };
+  cardItem: Pick<CardItem, "id" | "label" | "img">;
   classes?: ClassType;
 };
 
 export type SellerCardProps = {
-  cardItem: CardItem & { price: string; rating: number; reviews: string };
+  cardItem: CardItem;
   classes?: ClassType;
+};
+
+export type ProductSliderProps = {
+  sliderItems: CardItem[];
 };

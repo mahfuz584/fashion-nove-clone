@@ -1,5 +1,6 @@
+import ProductSlider from "@/app/[locale]/components/product-slider";
 import { Button } from "@/components/ui/button";
-import SellerLists from "./seller-list";
+import { menBestSellers } from "./constants";
 
 const GymBestSeller = () => {
   return (
@@ -15,7 +16,7 @@ const GymBestSeller = () => {
           View All
         </Button>
       </div>
-      <SellerLists />
+      <ProductSlider sliderItems={menBestSellers} />
     </div>
   );
 };

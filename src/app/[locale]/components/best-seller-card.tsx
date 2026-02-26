@@ -23,7 +23,7 @@ const BestSellerCard = ({ cardItem, classes }: SellerCardProps) => {
           classes?.img,
         )}
       />
-      <p className="text-xs font-medium pt-3 pb-1 pr-3 max-w-full truncate">
+      <p className="text-xs font-medium pt-3 pb-1 pr-3 max-w-full truncate hover:underline">
         {cardItem.label}
       </p>
       <div className="flex items-center justify-between w-full">
