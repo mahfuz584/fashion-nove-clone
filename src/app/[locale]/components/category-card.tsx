@@ -4,9 +4,12 @@ import Image from "next/image";
 import { CategoryCardProps } from "./types";
 
 const CategoryCard = ({ cardItem, classes }: CategoryCardProps) => {
+  console.log(cardItem.id);
   return (
     <Button
       variant="link"
+      component="link"
+      href={`gym/${cardItem.id}`}
       className={cn(
         "bg-card h-auto flex-col hover:border-none border-0 p-0 gap-0",
         classes?.root,
