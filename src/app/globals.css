@@ -7,7 +7,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-montserrat: var(--font-montserrat);
-  --font-ibm-plex-sans: var(--font-ibm-plex-sans);
+  --font-inter: var(--font-inter);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -43,22 +43,22 @@
 
 :root {
   --background: oklch(0.9901 0.0035 39.48);
-  --foreground: oklch(0.18 0.015 40);
+  --foreground: oklch(0% 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(0.9901 0.0035 39.48);
-  --popover-foreground: oklch(0.18 0.015 40);
-  --primary: oklch(0.205 0 0);
+  --popover-foreground: oklch(0% 0 0);
+  --primary: oklch(0% 0 0);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
+  --secondary-foreground: oklch(0% 0 0);
   --tertiary-foreground: oklch(0.4662 0.1642 4.6);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(93.705% 0.00011 271.152);
-  --accent-foreground: oklch(0.205 0 0);
+  --accent-foreground: oklch(0% 0 0);
   --popover: oklch(0.922 0 0);
-  --popover-foreground: oklch(0.205 0 0);
+  --popover-foreground: oklch(0% 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.9521 0 0);
   --input: oklch(0.9249 0 0);
@@ -127,25 +127,28 @@
     @apply text-2xl leading-7.5 font-bold tracking-[-1.68px] md:text-[28px] xl:text-[32px] xl:leading-[45.6px] xl:tracking-tight 2xl:text-4xl font-montserrat;
   }
   .body-1 {
-    @apply font-ibm-plex-sans text-lg leading-normal tracking-normal md:text-xl lg:tracking-[-0.72px] xl:text-2xl;
+    @apply font-inter text-lg leading-normal tracking-normal md:text-xl lg:tracking-[-0.72px] xl:text-2xl;
   }
   .body-2 {
-    @apply font-ibm-plex-sans text-xs leading-normal tracking-[-0.36px] md:text-lg lg:tracking-[-0.54px];
+    @apply font-inter text-xs leading-normal tracking-[-0.36px] md:text-lg lg:tracking-[-0.54px];
   }
   .body-3 {
-    @apply text-base leading-1.5 tracking-[-0.36px] md:text-lg lg:tracking-[-0.54px] font-ibm-plex-sans;
+    @apply text-base leading-1.5 tracking-[-0.36px] md:text-lg lg:tracking-[-0.54px] font-inter;
   }
   .body-4 {
-    @apply text-sm leading-normal tracking-[-0.36px] md:text-base lg:tracking-[0.54px] font-ibm-plex-sans;
+    @apply text-sm leading-normal tracking-[-0.36px] md:text-base lg:tracking-[0.54px] font-inter;
   }
   .body-5 {
-    @apply text-xs leading-normal tracking-[-0.36px] md:text-[13px] lg:tracking-[0.54px] font-ibm-plex-sans;
+    @apply text-xs leading-normal tracking-[-0.36px] md:text-[13px] lg:tracking-[0.54px] font-inter;
   }
   .body-6 {
-    @apply leading-normal tracking-[-0.36px] text-sm lg:tracking-[0.54px] font-ibm-plex-sans;
+    @apply leading-normal tracking-[-0.36px] text-sm lg:tracking-[0.54px] font-inter;
+  }
+  .body-8 {
+    @apply leading-normal tracking-wide text-xs font-inter;
   }
   .card-title {
-    @apply leading-7.5 font-semibold tracking-[-0.72px] text-base md:leading-9.5 lg:tracking-normal font-ibm-plex-sans;
+    @apply leading-7.5 font-semibold tracking-[-0.72px] text-base md:leading-9.5 lg:tracking-normal font-inter;
   }
   .container {
     @apply mx-auto max-w-450 px-4 sm:px-6 lg:px-8;

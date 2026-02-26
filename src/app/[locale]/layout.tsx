@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/lib/providers/theme-provider";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { IBM_Plex_Sans, Montserrat } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import { notFound } from "next/navigation";
 
 const montserrat = Montserrat({
@@ -16,8 +16,8 @@ const montserrat = Montserrat({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const ibm_plex_sans = IBM_Plex_Sans({
-  variable: "--font-ibm-plex-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -46,13 +46,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body
-        className={cn(
-          "antialiased",
-          ibm_plex_sans.variable,
-          montserrat.variable,
-        )}
-      >
+      <body className={cn("antialiased", inter.variable, montserrat.variable)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -61,8 +55,10 @@ export default async function RootLayout({
         >
           <NextIntlClientProvider>
             <TooltipProvider>
-              <Header />
-              <LenisProvider>{children}</LenisProvider>
+              <div className="flex flex-col h-screen">
+                <Header />
+                <LenisProvider>{children}</LenisProvider>
+              </div>
             </TooltipProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
