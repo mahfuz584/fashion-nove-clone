@@ -1,10 +1,11 @@
 import FilterSidebar from "./components/filter-sidebar";
 import ProductGrid from "./components/product-grid";
+import { CategoryPramasProps } from "./components/types";
 
-const CategoryPage = () => {
+const CategoryPage = ({ params }: CategoryPramasProps) => {
   return (
     <div className="h-full overflow-hidden flex">
-      <FilterSidebar />
+      <FilterSidebar params={params} />
       <ProductGrid />
     </div>
   );

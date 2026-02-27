@@ -24,7 +24,7 @@ const HeaderUtilities = () => {
         size="icon"
         startIcon={<Heart className="size-5.5" />}
         onMouseEnter={() => setActiveTooltip(null)}
-        className="hover:bg-accent hover:text-accent-foreground"
+        className="hover:bg-accent hover:text-primary"
       />
       <YourCart active={activeTooltip} setActive={setActiveTooltip} />
       <LanguageSwitcher setActive={setActiveTooltip} />

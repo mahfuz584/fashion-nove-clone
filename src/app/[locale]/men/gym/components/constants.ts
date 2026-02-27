@@ -1,6 +1,8 @@
-export const mensGymCategories = [
+import { MensGymCategoryListProps } from "../[category]/components/types";
+
+export const mensGymCategories: MensGymCategoryListProps[] = [
   {
-    id: "compression-shirts",
+    id: "compression-tshirts",
     label: "Compression T-shirts",
     img: "https://marena.com/cdn/shop/products/A8-502_Front_277_RETcopy2.jpg?v=1617999973&width=750",
   },
@@ -24,7 +26,7 @@ export const mensGymCategories = [
     label: "Footwear",
     img: "https://plus.unsplash.com/premium_photo-1670983858433-8ef0f54f0c71?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
-];
+] as const;
 
 export const menBestSellers = [
   {

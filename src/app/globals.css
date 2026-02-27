@@ -29,6 +29,7 @@
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
+  --color-accordion-trigger: var(--accordion-trigger);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-secondary: var(--secondary);
   --color-tertiary-foreground: var(--tertiary-foreground);
@@ -50,17 +51,18 @@
   --popover-foreground: oklch(0% 0 0);
   --primary: oklch(0% 0 0);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
+  --secondary: oklch(0.93 0 0 / 0.37);
   --secondary-foreground: oklch(0% 0 0);
   --tertiary-foreground: oklch(0.4662 0.1642 4.6);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(93.705% 0.00011 271.152);
+  --accordion-trigger: oklch(0.93 0 0 / 0.4);
   --accent-foreground: oklch(0% 0 0);
   --popover: oklch(0.922 0 0);
   --popover-foreground: oklch(0% 0 0);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.9521 0 0);
+  --border: oklch(0.9249 0 0);
   --input: oklch(0.9249 0 0);
   --ring: oklch(0.708 0 0);
   --chart-1: oklch(0.646 0.222 41.116);
@@ -143,6 +145,9 @@
   }
   .body-6 {
     @apply leading-normal tracking-[-0.36px] text-sm lg:tracking-[0.54px] font-inter;
+  }
+  .body-7 {
+    @apply leading-normal tracking-[-0.36px] text-[13px] font-inter;
   }
   .body-8 {
     @apply leading-normal tracking-wide text-xs font-inter;
