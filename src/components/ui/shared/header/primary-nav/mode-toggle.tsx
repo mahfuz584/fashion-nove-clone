@@ -36,7 +36,7 @@ export function ModeToggle() {
             variant="ghost"
             startIcon={<Sun className="size-5" />}
             onClick={() => setTheme("light")}
-            className="justify-start text-xs font-medium px-3"
+            className="justify-start px-3"
           >
             Light
           </Button>
@@ -44,7 +44,7 @@ export function ModeToggle() {
             variant="ghost"
             startIcon={<Moon className="size-5" />}
             onClick={() => setTheme("dark")}
-            className="justify-start text-xs font-medium px-3"
+            className="justify-start px-3"
           >
             Dark
           </Button>
@@ -53,7 +53,7 @@ export function ModeToggle() {
             variant="ghost"
             startIcon={<Monitor className="size-5" />}
             onClick={() => setTheme("system")}
-            className="justify-start text-xs font-medium px-3"
+            className="justify-start px-3"
           >
             System
           </Button>

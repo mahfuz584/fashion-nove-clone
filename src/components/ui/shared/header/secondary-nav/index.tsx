@@ -79,7 +79,7 @@ const SecondaryNav = () => {
     <>
       <div
         ref={backdropRef}
-        className="fixed left-0 right-0 bottom-0 top-23 bg-black/15 backdrop-blur-[2px] opacity-0 pointer-events-none"
+        className="fixed left-0 right-0 bottom-0 top-23 bg-black/15 backdrop-blur-[2px] opacity-0 pointer-events-none z-10"
       />
 
       <div

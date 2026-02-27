@@ -21,7 +21,7 @@ const YourCart = ({ active, setActive }: ActiveTooltipProps) => {
           className="hover:bg-accent hover:text-accent-foreground"
         />
       </TooltipTrigger>
-      <TooltipContent className="w-97 mr-2 px-4 py-6" sideOffset={12}>
+      <TooltipContent className="w-90 mr-2 px-4 py-6" sideOffset={12}>
         <p className="body-2 font-bold text-center">Start Shopping</p>
         <p className="text-center font-medium pt-1">
           Have an account? Sign in to view your bag
@@ -29,11 +29,11 @@ const YourCart = ({ active, setActive }: ActiveTooltipProps) => {
         <div className="flex items-center gap-3 pt-6">
           <Button
             variant="outline"
-            className="rounded-full text-xs w-[49%] h-11"
+            className="rounded-full w-[49%] h-11 text-sm"
           >
             Start Shopping
           </Button>
-          <Button className="rounded-full text-xs w-[49%] h-11">
+          <Button className="rounded-full w-[49%] h-11 text-sm">
             Checkout
           </Button>
         </div>
