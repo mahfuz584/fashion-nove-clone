@@ -60,7 +60,7 @@ const SizeFilter = ({ category }: { category: MensGymCategoryProps }) => {
 
     case "alpha+inseam":
       return (
-        <div className="flex flex-col gap-3.5">
+        <div className="flex flex-col gap-4">
           <Accordion type="single" collapsible defaultValue="size">
             <AccordionItem value="size">
               <AccordionTrigger>Size</AccordionTrigger>
@@ -80,7 +80,7 @@ const SizeFilter = ({ category }: { category: MensGymCategoryProps }) => {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-          <Accordion type="single" collapsible>
+          <Accordion type="single" collapsible defaultValue="length">
             <AccordionItem value="length">
               <AccordionTrigger>Length</AccordionTrigger>
               <AccordionContent>
