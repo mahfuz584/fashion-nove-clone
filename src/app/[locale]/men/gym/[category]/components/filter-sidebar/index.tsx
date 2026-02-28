@@ -9,7 +9,10 @@ const FilterSidebar = async ({ params }: CategoryPramasProps) => {
   const { category } = await params;
 
   return (
-    <aside className="max-w-59 w-full border-r overflow-y-auto px-3 py-6">
+    <aside
+      data-lenis-prevent
+      className="max-w-57 w-full border-r overflow-y-auto px-3 py-6 "
+    >
       <div className="mx-3 mb-6">
         <div className="flex items-center justify-between mb-4">
           <p className="body-8">REFINE BY</p>
@@ -19,7 +22,7 @@ const FilterSidebar = async ({ params }: CategoryPramasProps) => {
           placeholder="Search products by name"
           startIcon={<BiSearchAlt2 />}
           classes={{
-            root: "rounded-none h-7.5 w-full shadow-none hover:shadow-none focus:shadow-none border-t-0 border-r-0 border-l-0 border-b pl-5 pr-2 placeholder:text-[13px]",
+            root: "rounded-none h-7.5 w-full shadow-none hover:shadow-none focus:shadow-none border-t-0 border-r-0 border-l-0 border-b pl-5 pr-2 placeholder:text-xs",
             startIcon: "[&_svg]:size-4 left-0",
           }}
         />

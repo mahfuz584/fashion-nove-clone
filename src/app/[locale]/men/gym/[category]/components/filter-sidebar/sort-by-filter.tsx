@@ -6,14 +6,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { useState } from "react";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+
+import { Label } from "@/components/ui/label";
 
 export const sortOptions = [
   { value: "featured", label: "Featured" },
@@ -24,14 +19,14 @@ export const sortOptions = [
 ];
 
 const SortByFilter = () => {
-  const [value, setValue] = useState("price-low-high");
+  // const [value, setValue] = useState("price-low-high");
 
   return (
     <Accordion type="single" collapsible defaultValue="sort">
       <AccordionItem value="sort">
         <AccordionTrigger>Sort By</AccordionTrigger>
         <AccordionContent>
-          <Select value={value} onValueChange={setValue}>
+          {/* <Select value={value} onValueChange={setValue}>
             <SelectTrigger className="w-full" size="sm">
               <SelectValue placeholder="Select sort option" />
             </SelectTrigger>
@@ -42,7 +37,23 @@ const SortByFilter = () => {
                 </SelectItem>
               ))}
             </SelectContent>
-          </Select>
+          </Select> */}
+          <RadioGroup defaultValue="featured" className="w-fit">
+            {sortOptions.map((option) => (
+              <div
+                key={option.value}
+                className="flex items-center gap-2 cursor-pointer"
+              >
+                <RadioGroupItem value={option.value} id={option.value} />
+                <Label
+                  htmlFor={option.value}
+                  className="text-xs font-normal cursor-pointer"
+                >
+                  {option.label}
+                </Label>
+              </div>
+            ))}
+          </RadioGroup>
         </AccordionContent>
       </AccordionItem>
     </Accordion>

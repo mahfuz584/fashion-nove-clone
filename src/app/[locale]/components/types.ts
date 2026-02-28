@@ -1,3 +1,7 @@
+import { locales } from "@/lib/enums";
+
+export type LocaleProps = (typeof locales)[number];
+
 type ClassType = {
   root?: string;
   img?: string;
@@ -24,4 +28,11 @@ export type SellerCardProps = {
 
 export type ProductSliderProps = {
   sliderItems: CardItem[];
+};
+
+export type GenerateBreadCumbsProps = {
+  gender: string;
+  section: string;
+  category: string;
+  locales: LocaleProps;
 };

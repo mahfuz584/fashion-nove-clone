@@ -54,13 +54,12 @@ export default function ColorFilter() {
                   className="flex items-center gap-1.5 cursor-pointer"
                 >
                   <div
-                    className="relative size-5 rounded-full  flex items-center justify-center border"
+                    className="relative size-4 rounded-xs flex items-center justify-center border"
                     style={{ backgroundColor: color.bg }}
                   >
                     {checked && (
                       <GiCheckMark
                         className="size-2.5"
-                        strokeWidth="5"
                         style={{ color: tickColor }}
                       />
                     )}

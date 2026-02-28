@@ -1,5 +1,6 @@
 import FilterSidebar from "./components/filter-sidebar";
 import ProductGrid from "./components/product-grid";
+
 import { CategoryPramasProps } from "./components/types";
 
 const CategoryPage = ({ params }: CategoryPramasProps) => {
