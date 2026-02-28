@@ -8,19 +8,19 @@ export const DEPT_SEGMENTS = {
 export const SIZE_FILTERS = {
   "compression-tshirts": {
     type: "alpha",
-    options: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
+    options: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
   },
   "sleeveless-tanks": {
     type: "alpha",
-    options: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
+    options: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
   },
   joggers: {
     type: "alpha",
-    options: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
+    options: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
   },
   "performance-shorts": {
     type: "alpha+inseam",
-    options: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
+    options: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
     inseam: ['5"', '7"', '9"'],
   },
   footwear: {
@@ -29,3 +29,5 @@ export const SIZE_FILTERS = {
     options: ["39", "40", "41", "42", "43", "44"],
   },
 } as const;
+
+export const locales = ["en", "bn"] as const;

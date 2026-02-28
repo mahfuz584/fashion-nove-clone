@@ -18,7 +18,7 @@ const SizeFilter = ({ category }: { category: MensGymCategoryProps }) => {
           <AccordionItem value="size">
             <AccordionTrigger>Size</AccordionTrigger>
             <AccordionContent>
-              <div className="grid grid-cols-4 gap-0.75">
+              <div className="grid grid-cols-5 gap-0.75">
                 {sizeConfig.options.map((option) => (
                   <Button
                     key={option}
@@ -41,13 +41,13 @@ const SizeFilter = ({ category }: { category: MensGymCategoryProps }) => {
           <AccordionItem value="size">
             <AccordionTrigger>{`Size (${sizeConfig.system})`}</AccordionTrigger>
             <AccordionContent>
-              <div className="grid grid-cols-4 gap-0.75">
+              <div className="grid grid-cols-5 gap-0.75">
                 {sizeConfig.options.map((option) => (
                   <Button
                     key={option}
                     variant="outline"
                     size="sm"
-                    className="hover:bg-primary hover:text-primary-foreground"
+                    className="hover:bg-primary hover:text-primary-foreground text-[10px]"
                   >
                     {option}
                   </Button>
@@ -65,13 +65,13 @@ const SizeFilter = ({ category }: { category: MensGymCategoryProps }) => {
             <AccordionItem value="size">
               <AccordionTrigger>Size</AccordionTrigger>
               <AccordionContent>
-                <div className="grid grid-cols-4 gap-0.75">
+                <div className="grid grid-cols-5 gap-0.75">
                   {sizeConfig.options.map((option) => (
                     <Button
                       key={option}
                       variant="outline"
                       size="sm"
-                      className="hover:bg-primary hover:text-primary-foreground"
+                      className="hover:bg-primary hover:text-primary-foreground text-[10px]"
                     >
                       {option}
                     </Button>
