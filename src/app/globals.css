@@ -128,31 +128,31 @@
     @apply text-2xl leading-7.5 font-bold tracking-[-1.68px] md:text-[28px] xl:text-[32px] xl:leading-[45.6px] xl:tracking-tight 2xl:text-4xl font-montserrat;
   }
   .body-1 {
-    @apply font-inter text-lg leading-normal tracking-normal md:text-xl lg:tracking-[-0.72px] xl:text-2xl;
+    @apply text-lg leading-normal tracking-normal md:text-xl lg:tracking-[-0.72px] xl:text-2xl;
   }
   .body-2 {
-    @apply font-inter text-xs leading-normal tracking-[-0.36px] md:text-lg lg:tracking-[-0.54px];
+    @apply text-xs leading-normal tracking-[-0.36px] md:text-lg lg:tracking-[-0.54px];
   }
   .body-3 {
-    @apply text-base leading-1.5 tracking-[-0.36px] md:text-lg lg:tracking-[-0.54px] font-inter;
+    @apply text-base leading-1.5 tracking-[-0.36px] md:text-lg lg:tracking-[-0.54px];
   }
   .body-4 {
-    @apply text-sm leading-normal tracking-[-0.36px] md:text-base lg:tracking-[0.54px] font-inter;
+    @apply text-sm leading-normal tracking-[-0.36px] md:text-base lg:tracking-[0.54px];
   }
   .body-5 {
-    @apply text-xs leading-normal tracking-[-0.36px] md:text-[13px] lg:tracking-[0.54px] font-inter;
+    @apply text-xs leading-normal tracking-[-0.36px] md:text-[13px] lg:tracking-[0.54px];
   }
   .body-6 {
-    @apply leading-normal tracking-[-0.36px] text-sm lg:tracking-[0.54px] font-inter;
+    @apply leading-normal tracking-[-0.36px] text-sm lg:tracking-[0.54px];
   }
   .body-7 {
-    @apply leading-normal tracking-[-0.36px] text-[13px] font-inter;
+    @apply leading-normal tracking-[-0.36px] text-[13px];
   }
   .body-8 {
-    @apply leading-normal tracking-wide text-xs font-inter;
+    @apply leading-normal tracking-wide text-xs;
   }
   .card-title {
-    @apply leading-7.5 font-semibold tracking-[-0.72px] text-base md:leading-9.5 lg:tracking-normal font-inter;
+    @apply leading-7.5 font-semibold tracking-[-0.72px] text-base md:leading-9.5 lg:tracking-normal;
   }
   .container {
     @apply mx-auto max-w-450 px-4 sm:px-6 lg:px-8;
@@ -171,13 +171,13 @@ aside::-webkit-scrollbar-thumb {
   border-radius: 999px;
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground font-inter;
-  }
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(109, 20, 20, 0.25);
+  border-radius: 999px;
 }
 
 html.lenis,
@@ -191,4 +191,13 @@ html.lenis body {
 
 .lenis.lenis-stopped {
   overflow: hidden;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
 }

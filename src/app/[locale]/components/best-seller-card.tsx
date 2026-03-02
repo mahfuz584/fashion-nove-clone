@@ -28,7 +28,7 @@ const BestSellerCard = ({ cardItem, classes }: SellerCardProps) => {
       </p>
       <div className="flex items-center justify-between w-full">
         <p className="flex items-center gap-1.5 body-3 font-semibold text-tertiary-foreground">
-          <span>Tk</span>
+          <span>TK</span>
           {cardItem.price}
         </p>
         <ClientRacting rating={cardItem.rating} />
