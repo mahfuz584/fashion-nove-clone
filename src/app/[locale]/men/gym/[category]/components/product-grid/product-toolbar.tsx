@@ -24,7 +24,7 @@ const ProductToolbar = () => {
   });
 
   return (
-    <Breadcrumb>
+    <Breadcrumb className="mb-5">
       <BreadcrumbList>
         {breadcrumbs.map((item, index) => {
           const isLast = index === breadcrumbs.length - 1;

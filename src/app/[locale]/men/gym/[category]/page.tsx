@@ -5,7 +5,7 @@ import { CategoryPramasProps } from "./components/types";
 
 const CategoryPage = ({ params }: CategoryPramasProps) => {
   return (
-    <div className="h-full overflow-hidden flex">
+    <div className="flex h-screen overflow-hidden">
       <FilterSidebar params={params} />
       <ProductGrid />
     </div>
