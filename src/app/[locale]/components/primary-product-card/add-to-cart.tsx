@@ -1,19 +1,14 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import {
   Popover,
   PopoverContent,
-  PopoverDescription,
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
 } from "@/components/ui/popover";
-
-type AddToCartProps = {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-};
+import { X } from "lucide-react";
+import RenderSize from "./render-size";
+import { AddToCartProps } from "./types";
 
 const AddToCart = ({ open, onOpenChange }: AddToCartProps) => {
   return (
@@ -24,16 +19,15 @@ const AddToCart = ({ open, onOpenChange }: AddToCartProps) => {
           onClick={(e) => {
             e.stopPropagation();
           }}
-          className="w-[85%] rounded-full text-base absolute -translate-x-1/2 left-1/2 top-81 h-11.5 z-20 opacity-0 group-hover/addToCart:opacity-100 transition-all duration-300 ease-in-out"
+          className="w-[88%] rounded-full text-base absolute -translate-x-1/2 left-1/2 top-81 h-11.5 z-20 opacity-0 group-hover/addToCart:opacity-100 transition-all duration-300 ease-in-out"
         >
-          sdas
+          Add to cart
         </Button>
       </PopoverTrigger>
-
       <PopoverContent
         side="top"
         align="center"
-        className=""
+        sideOffset={-48}
         onPointerDownOutside={(e) => {
           e.stopPropagation();
         }}
@@ -41,10 +35,17 @@ const AddToCart = ({ open, onOpenChange }: AddToCartProps) => {
           e.stopPropagation();
         }}
       >
-        <PopoverHeader>
-          <PopoverTitle>Title</PopoverTitle>
-          <PopoverDescription>Description text here.</PopoverDescription>
+        <PopoverHeader className="flex justify-between">
+          <PopoverTitle>Select Size</PopoverTitle>
+          <Button
+            size="icon-sm"
+            variant="ghost"
+            startIcon={<X />}
+            onClick={() => onOpenChange(false)}
+            className="p-0 size-6.5"
+          />
         </PopoverHeader>
+        <RenderSize />
       </PopoverContent>
     </Popover>
   );
