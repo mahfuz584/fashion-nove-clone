@@ -1,5 +1,6 @@
 "use client";
 
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Heart } from "lucide-react";
 import Image from "next/image";
@@ -15,6 +16,7 @@ const PrimaryProductCard = () => {
   return (
     <div className="relative h-auto flex-col border-0 p-0 gap-0 items-start rounded-none bg-transparent text-card-foreground hover:bg-transparent truncate">
       <div className="group/addToCart">
+        <Badge className="absolute top-2 left-2">50% OFF</Badge>
         <Button
           component="link"
           href={`${pathName}/1`}
