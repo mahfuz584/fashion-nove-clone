@@ -45,12 +45,7 @@ const SortByFilter = () => {
                 className="flex items-center gap-2 cursor-pointer"
               >
                 <RadioGroupItem value={option.value} id={option.value} />
-                <Label
-                  htmlFor={option.value}
-                  className="text-xs font-normal cursor-pointer"
-                >
-                  {option.label}
-                </Label>
+                <Label htmlFor={option.value}>{option.label}</Label>
               </div>
             ))}
           </RadioGroup>

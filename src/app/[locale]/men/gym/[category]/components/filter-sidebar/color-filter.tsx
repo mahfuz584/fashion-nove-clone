@@ -6,73 +6,90 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Checkbox } from "@/components/ui/checkbox";
-import { useState } from "react";
-import { GiCheckMark } from "react-icons/gi";
+import { Label } from "@/components/ui/label";
+import { cn } from "@/lib/utils";
+import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
+import { CircleCheckIcon } from "lucide-react";
 
-const isLight = (hex: string) => {
-  const c = hex.substring(1);
-  const rgb = parseInt(c, 16);
-  const r = (rgb >> 16) & 0xff;
-  const g = (rgb >> 8) & 0xff;
-  const b = (rgb >> 0) & 0xff;
-  const brightness = 0.299 * r + 0.587 * g + 0.114 * b;
-  return brightness > 186;
-};
-
-const colorsFilter = [
-  { bg: "#000000", label: "Black" },
-  { bg: "#2563EB", label: "Blue" },
-  { bg: "#DC2626", label: "Red" },
-  { bg: "#FFFFFF", label: "White" },
-  { bg: "#FACC15", label: "Yellow" },
+const checkboxData = [
+  {
+    id: 1,
+    color: "#ef4444",
+    label: "Red",
+    className: "bg-red-500 data-[state=checked]:text-red-500",
+  },
+  {
+    id: 2,
+    color: "#3b82f6",
+    label: "Blue",
+    className: "bg-blue-500 data-[state=checked]:text-blue-500",
+  },
+  {
+    id: 3,
+    color: "#22c55e",
+    label: "Green",
+    className: "bg-green-500 data-[state=checked]:text-green-500",
+  },
+  {
+    id: 4,
+    color: "#eab308",
+    label: "Yellow",
+    className: "bg-yellow-400 data-[state=checked]:text-yellow-400",
+  },
+  {
+    id: 5,
+    color: "#a855f7",
+    label: "Purple",
+    className: "bg-purple-500 data-[state=checked]:text-purple-500",
+  },
+  {
+    id: 6,
+    color: "#f97316",
+    label: "Orange",
+    className: "bg-orange-500 data-[state=checked]:text-orange-500",
+  },
+  {
+    id: 7,
+    color: "#06b6d4",
+    label: "Cyan",
+    className: "bg-cyan-500 data-[state=checked]:text-cyan-500",
+  },
+  {
+    id: 8,
+    color: "#ec4899",
+    label: "Pink",
+    className: "bg-pink-500 data-[state=checked]:text-pink-500",
+  },
 ];
 
 export default function ColorFilter() {
-  const [selected, setSelected] = useState<string[]>([]);
-
-  const toggle = (label: string) => {
-    setSelected((prev) =>
-      prev.includes(label) ? prev.filter((v) => v !== label) : [...prev, label],
-    );
-  };
-
   return (
     <Accordion type="single" collapsible defaultValue="color">
       <AccordionItem value="color">
         <AccordionTrigger>Color</AccordionTrigger>
         <AccordionContent>
-          <div className="grid grid-cols-2 gap-x-5 gap-y-3">
-            {colorsFilter.map((color) => {
-              const checked = selected.includes(color.label);
-              const tickColor = isLight(color.bg) ? "#000000" : "#FFFFFF";
-
-              return (
-                <div
-                  key={color.label}
-                  onClick={() => toggle(color.label)}
-                  className="flex items-center gap-1.5 cursor-pointer"
+          <div className="grid grid-cols-2 gap-2">
+            {checkboxData.map((item) => (
+              <Label key={item.id} className="flex items-center gap-2">
+                <CheckboxPrimitive.Root
+                  key={item.id}
+                  data-slot="checkbox"
+                  aria-label={`Color ${item.color}`}
+                  className={cn(
+                    "peer size-5 shrink-0 rounded-full  cursor-pointer",
+                    item.className,
+                  )}
                 >
-                  <div
-                    className="relative size-4 rounded-xs flex items-center justify-center border"
-                    style={{ backgroundColor: color.bg }}
+                  <CheckboxPrimitive.Indicator
+                    data-slot="checkbox-indicator"
+                    className="flex items-center justify-center transition-none"
                   >
-                    {checked && (
-                      <GiCheckMark
-                        className="size-2.5"
-                        style={{ color: tickColor }}
-                      />
-                    )}
-                  </div>
-                  <span className="text-xs">{color.label}</span>
-                  <Checkbox
-                    checked={checked}
-                    onCheckedChange={() => toggle(color.label)}
-                    className="hidden"
-                  />
-                </div>
-              );
-            })}
+                    <CircleCheckIcon className="size-4.5 fill-white" />
+                  </CheckboxPrimitive.Indicator>
+                </CheckboxPrimitive.Root>
+                <span className="text-xs">{item.label}</span>
+              </Label>
+            ))}
           </div>
         </AccordionContent>
       </AccordionItem>

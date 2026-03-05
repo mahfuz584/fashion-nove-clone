@@ -2,6 +2,8 @@ import { Input } from "@/components/ui/input";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { CategoryPramasProps, MensGymCategoryProps } from "../types";
 import ColorFilter from "./color-filter";
+import DiscountFilter from "./discount-filter";
+import FabricFilter from "./fabric-filter";
 import SizeFilter from "./size-filter";
 import SortByFilter from "./sort-by-filter";
 
@@ -30,6 +32,8 @@ const FilterSidebar = async ({ params }: CategoryPramasProps) => {
       <div className="flex flex-col gap-5">
         <SortByFilter />
         <SizeFilter category={category as MensGymCategoryProps} />
+        <DiscountFilter />
+        <FabricFilter />
         <ColorFilter />
       </div>
     </aside>
