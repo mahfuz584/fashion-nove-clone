@@ -24,7 +24,7 @@ const SizeFilter = ({ category }: { category: MensGymCategoryProps }) => {
                     key={option}
                     variant="outline"
                     size="sm"
-                    className="hover:bg-primary hover:text-primary-foreground"
+                    className="hover:bg-primary hover:text-primary-foreground text-[11px]"
                   >
                     {option}
                   </Button>

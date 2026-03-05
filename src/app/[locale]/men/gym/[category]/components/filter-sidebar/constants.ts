@@ -68,3 +68,21 @@ export const sortOptions = [
   { value: "price-high-low", label: "Price: High to Low" },
   { value: "newest", label: "Newest Arrivals" },
 ];
+
+export const discountOptions = [
+  { value: "10", label: "10%" },
+  { value: "20", label: "20%" },
+  { value: "30", label: "30%" },
+  { value: "40", label: "40%" },
+  { value: "50", label: "50%" },
+  { value: "60", label: "60%" },
+  { value: "70", label: "70%" },
+];
+
+export const fabricOptions = [
+  { value: "nylon", label: "Nylon" },
+  { value: "cotton", label: "Cotton" },
+  { value: "spandex", label: "Spandex" },
+  { value: "leather", label: "Leather" },
+  { value: "polyester", label: "Polyester" },
+];
