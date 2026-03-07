@@ -1,11 +1,12 @@
 "use client";
 
 import { Rating } from "react-simple-star-rating";
+import { ClientRatingProps } from "./types";
 
-const ClientRating = ({ rating }: { rating: number }) => {
+const ClientRating = ({ rating, size = 20 }: ClientRatingProps) => {
   return (
     <Rating
-      size={20}
+      size={size}
       readonly
       allowFraction
       initialValue={rating}
