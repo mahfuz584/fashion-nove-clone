@@ -61,7 +61,7 @@ const PrimaryProductCard = () => {
             <span>TK</span>299
           </p>
           <p className="flex items-center gap-0.5 body-8 font-normal line-through">
-            <span>TK</span>299
+            <span>TK</span>199
           </p>
         </div>
         <p className="body-8 font-semibold text-tertiary-foreground text-start">

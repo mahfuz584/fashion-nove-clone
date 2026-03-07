@@ -1,5 +1,5 @@
 import ProductList from "./product-list";
-import ProductToolbar from "./product-toolbar";
+import ProductToolbar from "../product-toolbar";
 
 const ProductGrid = () => {
   return (
