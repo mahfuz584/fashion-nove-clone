@@ -29,6 +29,8 @@ const ProductToolbar = () => {
     ],
   });
 
+  console.log(breadcrumbsPath);
+
   return <CommonBreadcrumb breadcrumbsPath={breadcrumbsPath} />;
 };
 

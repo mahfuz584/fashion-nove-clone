@@ -57,8 +57,8 @@
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(93.705% 0.00011 271.152);
+  --accent-foreground: oklch(38.666% 0.00004 271.152);
   --accordion-trigger: oklch(0.93 0 0 / 0.4);
-  --accent-foreground: oklch(0% 0 0);
   --popover-foreground: oklch(0% 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.9249 0 0);
@@ -127,6 +127,9 @@
   .header-subtitle {
     @apply text-2xl leading-7.5 font-bold tracking-[-1.68px] md:text-[28px] xl:text-[32px] xl:leading-[45.6px] xl:tracking-tight 2xl:text-4xl font-montserrat;
   }
+  .caption-1 {
+    @apply text-base leading-6 tracking-tighter sm:text-lg md:text-xl lg:text-2xl xl:text-[28px];
+  }
   .body-1 {
     @apply text-lg leading-normal tracking-normal md:text-xl lg:tracking-[-0.72px] xl:text-2xl;
   }
@@ -151,6 +154,9 @@
   .body-8 {
     @apply leading-normal tracking-wide text-xs;
   }
+  .body-9 {
+    @apply leading-normal tracking-normal text-[11px];
+  }
   .card-title {
     @apply leading-7.5 font-semibold tracking-[-0.72px] text-base md:leading-9.5 lg:tracking-normal;
   }
@@ -162,11 +168,11 @@
   }
 }
 
-aside::-webkit-scrollbar {
+.secondary-scroll::-webkit-scrollbar {
   width: 2px;
 }
 
-aside::-webkit-scrollbar-thumb {
+.secondary-scroll::-webkit-scrollbar-thumb {
   background: rgba(106, 106, 106, 0.3);
   border-radius: 999px;
 }

@@ -4,8 +4,9 @@ type ClassType = {
 };
 
 export type ClientRatingProps = {
-  rating: number;
   size?: number;
+  rating: number;
+  fillColor?: string;
 };
 
 type CardItem = {

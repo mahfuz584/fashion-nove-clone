@@ -13,7 +13,7 @@ const FilterSidebar = async ({ params }: CategoryPramasProps) => {
   return (
     <aside
       data-lenis-prevent
-      className="max-w-57 w-full overflow-y-auto px-3 py-5.5"
+      className="max-w-57 w-full overflow-y-auto px-3 py-5.5 secondary-scroll"
     >
       <div className="mx-3 mb-6">
         <div className="flex items-center justify-between mb-4">

@@ -1,8 +1,10 @@
-import CommonBreadcrumb from "../../../components/common-bread-crumb";
-import { generateBreadcrumb } from "../../../components/utils";
-import { ProductDeatilsParamsProps } from "../types";
+import CommonBreadcrumb from "../../components/common-bread-crumb";
+import { generateBreadcrumb } from "../../components/utils";
 import DetailsPanel from "./details-panel";
-import ProductPreview from "./product-preview";
+import ProductDiscovery from "./product-discovery.tsx";
+import ProductGallery from "./product-gallery";
+import Reviews from "./reviews";
+import { ProductDeatilsParamsProps } from "./types";
 
 const ProductDetails = async ({ params }: ProductDeatilsParamsProps) => {
   const { category, locale, product_slug } = await params;
@@ -30,11 +32,13 @@ const ProductDetails = async ({ params }: ProductDeatilsParamsProps) => {
   });
 
   return (
-    <div className="py-5.5 max-w-6xl w-full mx-auto px-10">
+    <div className="py-5.5 max-w-7xl w-full mx-auto px-10">
       <CommonBreadcrumb breadcrumbsPath={breadcrumbsPath} />
-      <div className="grid grid-cols-12 gap-10 ">
-        <ProductPreview />
+      <div className="grid grid-cols-12 gap-x-10 gap-y-20">
+        <ProductGallery />
         <DetailsPanel />
+        <Reviews />
+        <ProductDiscovery />
       </div>
     </div>
   );
