@@ -5,9 +5,9 @@ import ProductInfoAccordion from "@/app/[locale]/components/primary-product-card
 import { Button } from "@/components/ui/button";
 import { Clock, Heart, Van } from "lucide-react";
 import { useState } from "react";
-import ColorPicker from "../../../components/color-picker";
-import { checkboxData } from "../../../components/filter-sidebar/color-filter";
-import { lengthOptions, sizedOptions } from "../constant";
+import ColorPicker from "../../components/color-picker";
+import { checkboxData } from "../../components/filter-sidebar/color-filter";
+import { lengthOptions, sizedOptions } from "./constant";
 
 const DetailsPanel = () => {
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
@@ -16,7 +16,7 @@ const DetailsPanel = () => {
     setSelectedColor(id);
   };
   return (
-    <div className="flex justify-between col-span-5">
+    <div className="flex justify-between col-span-4">
       <div className="w-full">
         <div className="flex justify-between">
           <div>
